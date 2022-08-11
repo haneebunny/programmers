@@ -1,4 +1,4 @@
-/ 서울에서 김서방 찾기
+// 서울에서 김서방 찾기
 // 문제 설명
 // String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, "김서방은 x에 있다"는 String을 반환하는 함수, solution을 완성하세요. seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.
 
@@ -34,4 +34,3 @@ function solution(seoul) {
 // 반복문과 if 를 통해 배열 속에서 김서방을 찾는다.
 // 김서방을 찾으면 해당 인덱스 번호를 저장한 후, break
 // break break문은 반복문, switch문, 레이블 문과 결합한 곳을 빠져나올 때 사용
-
