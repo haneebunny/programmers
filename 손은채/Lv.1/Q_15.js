@@ -64,3 +64,41 @@ function solution(s) {
   // 공백을 기준으로 (띄어서) 문자열을 만들어 준다.
   return answer;
 }
+
+// 다른 사람들 풀이 분석하기
+// charAt() charAt() 함수는 문자열에서 특정 인덱스에 위치하는 유니코드 단일문자를 반환
+
+function solution(s) {
+  let result = '',
+    num = 0;
+  // 이 num은 어떤 역할을?
+
+  for (let i = 0; i < s.length; i++) {
+    if (s.charAt(i) == ' ') {
+      result += ' ';
+      if (num % 2 === 1) num--;
+      continue;
+
+      // 이 if 부분이 없으면 공백이 하나씩 더 늘어난다.
+      // num이 홀수이면 하나씩 줄어든다.
+      // 정확한 의도는 다시 파악해야 할 듯.
+
+      // ....
+
+      // num은 계속 증가하다가, 공백을 만나면 홀수면 하나 줄이고, 짝수면 유지한다
+      // 아마.. 다음 단어의 첫번째 자리가 짝수일 수 있게 하는 것 같다!!!
+    }
+
+    if (num % 2 === 0) result += s.charAt(i).toUpperCase();
+    // num이 짝수 => 대문자
+    else result += s.charAt(i);
+    // num이 홀수 =>
+
+    num++;
+    // num을 하나씩 증가
+  }
+  return result;
+}
+
+// s.chartAt(i) 를 통해 하나의 요소를 만들어 해당 요소가 ' '일 때를 분리해내거나
+// 알파벳을 분리
