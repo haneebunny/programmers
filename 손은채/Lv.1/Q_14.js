@@ -103,3 +103,26 @@ function solution(s) {
   // 0은 false 이기 때문에 => : 뒤에 있는 true가 반환
   // 그 외 숫자는 : 앞에 있는 false ( p와 y의 갯수가 차이가 있다는 것 )
 }
+
+// 다른 사람 풀이를 보고
+
+function solution(s) {
+  return (
+    s.toUpperCase().split('P').length === s.toUpperCase().split('Y').length
+  );
+}
+
+// 이 함수의 문제점 => p, y가 없는 문자열이 들어갔을 때 true가 나온다
+// p,y가 없을 때를 예외처리 해주어야 함
+
+function solution(s) {
+  if (s.toUpperCase().indexOf('P' || 'Y') === -1) {
+    return true;
+  } else
+    return (
+      s.toUpperCase().split('P').length === s.toUpperCase().split('Y').length
+    );
+}
+
+// 하지만 이 방식에서 3번 실패 (...)
+// 다시 생각해볼 것
