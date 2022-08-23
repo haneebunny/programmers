@@ -20,3 +20,27 @@ function solution(numbers) {
   }
   return answer;
 }
+
+// 이렇게도 해보면 어떨까?
+// 0 ~ 9까지 있는 배열과 비교해서, 없는 것끼리 더하면?
+
+const Array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+function solution(numbers) {
+  let sum = 0;
+
+  for (let i = 0; i <= 9; i++) {
+    if (Array.includes(numbers[i]) === true) {
+      delete Array[numbers[i]];
+      for (let i = 0; i < Array.length; i++) {
+        sum += Array[i];
+      }
+    }
+  }
+
+  return sum;
+}
+
+// 최종 배열 Array의 합을 구하려고 했는데,
+// delete의 경우 요소를 완전히 없어지는 것이 아니라 배열의 길이는 그대로 남아있는 편이어서
+// NaN 나온다... for - if - for 도 중첩되는 것이 좋지 않은 것 같아서 패스. 원본 Array도 훼손되는 것 같다.
