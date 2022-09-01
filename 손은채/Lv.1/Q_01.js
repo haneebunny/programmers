@@ -18,10 +18,19 @@ function solution(s) {
   return Number(s);
 }
 
-// 다른 사람 풀이 중  인상 깊었던
+// 다른 사람 풀이 중  인상 깊었던 것
 
-function strToInt(str) {
+function solution(str) {
   return +str;
 }
 
+function solution(str) {
+  return str / 1;
+}
+
 // 문자열과 숫자열의 사칙연산은 숫자가 나온다
+
+const str = parseInt;
+console.log(str('-1234'));
+
+// paresInt () 문자열 인자를 파싱하여 특정 진수(수의 진법 체계에서 기준이 되는 값)의 정수를 반환
