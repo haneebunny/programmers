@@ -43,7 +43,9 @@ function solution(arr) {
 // 위 문제와는 다름!
 
 function solution1(arr) {
+  // Array를 Set으로 변환하기 위해서는 정규 Set 생성자 사용
   const set = new Set(arr);
+  // set을 Array로 변환하기 위해 전개 연산자 사용
   const newArr = [...set];
 
   return newArr;
