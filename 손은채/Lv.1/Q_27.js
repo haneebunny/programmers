@@ -44,14 +44,29 @@ function solution(n, m) {
     }
   }
 
-  // 최소공배수 구하기
+  // 최소 공배수 구하기 1차 생각
+  // let mini = Math.min(n, m); // 두 수 중에 작은 수
+  // let min = 0 // 최소공배수 초기화
+  // if ( biggest % mini !== 0 ) {
+  // 두 수 중, 큰 수에서 작은 수를 나누었을 때 0이 되지 않으면
+  //    min = n * m
+  // 두 수를 곱하는 것을 최소 공배수로
+  // } else {
+  //    min = biggest
+  // 0이면 두 수 중 큰 수를 최소 공배수로
+  // }
+  // return [ max, min ]
+
+  // 테스트 케이스 3,12 / 2,5 만 보고 풀다 보니 다른 케이스를 대비 하지 못했음.
+  // 최대공약수과 같이 for 문 사용
+
+  // 최소공배수 구하기 2차
   let min = 0; // 공배수 중에서 제일 작은 수만 저장
   for (let i = biggest; i <= n * m; i += biggest) {
     // 두 수 중 큰 수를, 두 수 중의 작은 수로 나누었을 때 0인 것이 최소 공배수
     // 만약 0이 되지 않으면, 큰 수의 배 로 늘려가기
     if (i % Math.min(n, m) === 0) {
       min = i;
-      console.log(i, n, m);
 
       break;
     }
